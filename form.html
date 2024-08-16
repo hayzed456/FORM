@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>REGISTRATION FORM</title>
+        <style>
+            body {
+                font-family: Arial, Helvetica, sans-serif;
+                background-color: rgb(12, 225, 51);
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 100vh;
+            }
+            .registration-form {
+                background-color: #1119ab;
+                padding: 20%;
+                border-radius: 5px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.01);
+            }
+            .registration-form h2 {
+                text-align: center;
+                margin-bottom: 20px;
+            }
+            .registration-form
+            input[type="text"],
+            .registration-form
+            input[type="email"],
+            .registration-form
+            input[type="password"] {
+                width: 100%;
+                padding: 10px;
+                margin: 5px 0 15px 0;
+                border: 1px solid #ff0303;
+                border-radius: 3px;
+            }
+            .registration-form
+            input[type="submit"] {
+                width: 100%;
+                padding: 10px;
+                background-color: #4CAF50;
+                color: white;
+                border: none;
+                border-radius: 3px;
+                cursor: pointer;
+            }
+            .registration-form
+            input[type="submit"]:hover {
+                background-color: #a617da;
+            }
+        </style>
+    
+    </head>
+    <body>
+        <div class="registration-form">
+            <h2>SIGN UP</h2>
+            <form action="/submit_registration" method="post">
+                <label for="fname"> FIRST NAME:</label><br>
+                <input type="text" id="fname"name="fname" required><br>
+                <label for="lname"> LAST NAME:</label><br>
+                <input type="text" id="lname"name="lname" required><br>
+                <label for="email"> EMAIL:</label><br>
+                <input type="email" id="email"name="email" required><br>
+                <label for="password"> PASSWORD:</label><br>
+                <input type="password" id="password"name="password" required><br>
+                <label for="D.O.B"> DATE OF BIRTH:</label><br>
+                <input type="date" id="D.O.B"name="D.O.B" required><br>
+                <label for="phone">PHONE NUMBER:</label><br>
+                <input type="tel" id="phone"name="phone" pattern="[0-9]{10}" required><br>
+                <label for="gender">GENDER:</label><br>
+                <select id="gender"name="gender" required>
+                    <option value="">SELECT GENDER</option>
+                    <option value="male">MALE</option>
+                    <option value="female">FEMALE</option>
+                    <option value="other">OTHER</option>
+                    <option value="prefer_not_to_say">PREFER NOT TO SAY</option>
+                </select><br>
+                <input type="submit" value="Register">
+            </form>
+        </div>
+    </body>
+</html>
